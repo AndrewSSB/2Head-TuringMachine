@@ -1,0 +1,84 @@
+
+
+States:
+	q0
+	q1
+	q2
+	q3
+	q_final
+End
+
+Input alphabet:
+	1
+	0
+End
+
+Tape alphabet:
+	0
+	1
+	B
+End
+
+Transitions:
+	q0 q0 1 1 R
+	q0 q1 0 1 R
+	q1 q1 1 1 R
+	q1 q2 B B L
+	q2 q3 1 B L
+	q3 q3 1 1 L
+	q3 q_final B B R
+End
+
+Start state:
+	q0
+End
+
+Accept state:
+	q_final
+End
+
+
+----------------------------------------------------------
+
+
+States:
+	q0
+	q1
+	q2
+	q3
+	q4
+	q_final
+End
+
+Input alphabet:
+	c
+	0
+End
+
+Tape alphabet:
+	0
+	x
+	c
+	B
+End
+
+Transitions:
+	q0 q1 0 x R
+	q0 q_final c B R
+	q1 q1 0 0 R
+	q1 q2 c c R
+	q2 q2 0 0 R
+	q2 q3 B 0 L
+	q3 q3 0 0 L
+	q3 q4 c c L
+	q4 q4 0 0 L
+	q4 q1 x x R
+End
+
+Start state:
+	q0
+End
+
+Accept state:
+	q_final
+End

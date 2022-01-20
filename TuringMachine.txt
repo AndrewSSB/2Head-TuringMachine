@@ -1,0 +1,49 @@
+States:
+	q1
+	q2
+	q3
+	q4
+	q5
+	q_accept
+	q_reject
+End
+
+Input:
+	0
+End
+
+Tape:
+	0
+	x
+	_
+End
+
+Transitions:
+	q1 q2 0 _ R 1 0 L
+	q2 q2 x e R 0 x L
+	q5 q2 _ e R x e L
+	q5 q5 0 e L 1 0 R
+	q5 q5 x e L 0 1 R
+	q3 q5 _ e L _ e R
+	q3 q3 x e R x 1 L
+	q2 q3 0 x R 0 e R
+	q3 q4 0 e R 1 e R
+	q4 q3 0 x R _ x L
+	q4 q4 x e R 0 0 L
+	q2 q_accept _ e R _ e L
+	q1 q_reject _ e R 1 0 R
+	q1 q_reject x e R _ 1 L
+	q4 q_reject _ e R x _ R
+
+End
+
+Start state:
+	q1
+End
+
+Accept state:
+	q_accept
+End
+Reject state:
+	 q_reject
+End
